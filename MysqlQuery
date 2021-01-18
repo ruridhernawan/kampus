@@ -1,0 +1,3 @@
+SELECT Mahasiswa.NM_MHS, Max(Nilai.Value) AS MaxOfValue, Mata_Kuliah.Nama_Matkul
+FROM Mata_Kuliah INNER JOIN (Mahasiswa INNER JOIN Nilai ON Mahasiswa.NIM = Nilai.NIM) ON Mata_Kuliah.Kode_MK = Nilai.Kode_MataKuliah
+GROUP BY Mahasiswa.NM_MHS, Mata_Kuliah.Nama_Matkul;
